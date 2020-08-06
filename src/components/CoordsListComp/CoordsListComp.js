@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Button } from "reactstrap";
 import "./CoordsListComp.css";
 

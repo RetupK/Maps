@@ -19,7 +19,7 @@ const CoordsContainer = ({ collapses, changeCollapse, markers, removeMarker }) =
                         href="#pablo"
                         id="collapseOne"
                     >
-                        Coords List{" "}
+                        <span aria-label="sheep" role="img">📊</span> Coordinations List{" "}
                         <i className="nc-icon nc-minimal-down" />
                     </a>
                 </h5>

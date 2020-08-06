@@ -18,7 +18,7 @@ function MapContainer({ collapses, changeCollapse, markers, addMarker, changeMar
                         href="#pablo"
                         id="collapseOne"
                     >
-                        Map{" "}
+                        <span aria-label="sheep" role="img">🌎 Map</span> 
                         <i className="nc-icon nc-minimal-down" />
                     </a>
                 </h5>
