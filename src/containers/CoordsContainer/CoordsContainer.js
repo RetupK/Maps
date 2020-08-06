@@ -5,12 +5,13 @@ import {
     Collapse,
 } from "reactstrap";
 import CoordsListComp from "../../components/CoordsListComp/CoordsListComp";
+import "./CoordsContainer.css";
 
-const CoordsContainer = ({ collapses, changeCollapse, coords, setCoords }) => {
+const CoordsContainer = ({ collapses, changeCollapse, markers, removeMarker }) => {
     return (
         <>
-            <CardHeader className="card-collapse" id="headingOne" role="tab">
-                <h5 className="mb-0 panel-title" onClick={e => { e.preventDefault(); changeCollapse(2); }}>
+            <CardHeader className="card-collapse" id="headingOne" role="tab" onClick={e => { e.preventDefault(); changeCollapse(2); }}>
+                <h5 className="mb-0 panel-title">
                     <a
                         aria-expanded={collapses.includes(2)}
                         className="collapsed"
@@ -25,8 +26,8 @@ const CoordsContainer = ({ collapses, changeCollapse, coords, setCoords }) => {
             </CardHeader>
             <Collapse isOpen={collapses.includes(2)}>
                 <CardBody>
-                    <CoordsListComp coords={coords} setCoords={setCoords}/>
-            </CardBody>
+                    <CoordsListComp markers={markers} removeMarker={removeMarker} />
+                </CardBody>
             </Collapse>
         </>
     )

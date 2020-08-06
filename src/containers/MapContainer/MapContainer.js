@@ -6,7 +6,7 @@ import {
 } from "reactstrap";
 import MapComponent from "../../components/MapComp/MapComponent";
 
-function MapContainer({ collapses, changeCollapse, coords, setCoords }) {
+function MapContainer({ collapses, changeCollapse, markers, addMarker, changeMarker }) {
     return (
         <>
             <CardHeader className="card-collapse" id="headingOne" role="tab" onClick={e => { e.preventDefault(); changeCollapse(1); }}>
@@ -25,7 +25,7 @@ function MapContainer({ collapses, changeCollapse, coords, setCoords }) {
             </CardHeader>
             <Collapse isOpen={collapses.includes(1)}>
                 <CardBody>
-                    <MapComponent coords={coords} setCoords={setCoords}/>
+                    <MapComponent markers={markers} addMarker={addMarker} changeMarker={changeMarker} />
                 </CardBody>
             </Collapse>
         </>
